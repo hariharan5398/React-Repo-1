@@ -2,12 +2,14 @@
 /* Display Picture Section */
 .dp-section{
     width:317px;
-    height: 317px;
+    height: 250px;
     overflow: hidden;
+    margin-bottom: 1em;
 }
 
 .display-pic{
     max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Name Section */
@@ -18,13 +20,32 @@
     align-items: center;
 }
 
-.Name-section > h2, .Name-section > p{
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.Name-section > h2, .Name-section > p, a, p{
     margin: 0;
+    font-weight: 400;
+}
+
+.Name-section > h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.Name-section > p{
+    font-size: 12.8px;
+}
+
+a{
+    font-size: 10.24px;
 }
 
 /* Connect Section */
 .connect-section{
-    padding-top: 1em;
+    padding: 1em 0;
     display: flex;
     justify-content: space-around;
 }
@@ -32,4 +53,43 @@
 .Btn-connect{
     width: 115px;
     height: 34px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    
+}
+
+.Btn-linkedin{
+    background-color: #5093E2;
+    color: #FFFFFF;    
+}
+
+/* About & Interests Section */
+
+.blog-section{
+    padding: 0 1.5em;
+    text-align: justify;
+}
+
+.Heading{
+padding: 0.5em 0;
+font-weight: 700;
+font-size: 16px;
+}
+
+.content{
+    color: #DCDCDC;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 1em;
+    line-height: 15px;
+}
+
+/* social Icon Section  */
+
+.socialIcon{
+    padding: 1em 3em;
+    display: flex;
+    justify-content: space-around;
 }

@@ -1,5 +1,8 @@
 .App-Section{
     width: 317px;
-    margin: auto;
-    border: 9px solid yellow;
+    border-radius: 8px;
+    margin:  2.5em auto;
+    background-color: #1A1B21;
+    font-family: 'Inter', sans-serif;
+    color: #FFFF;
 }
