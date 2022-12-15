@@ -1,0 +1,35 @@
+
+/* Display Picture Section */
+.dp-section{
+    width:317px;
+    height: 317px;
+    overflow: hidden;
+}
+
+.display-pic{
+    max-width: 100%;
+}
+
+/* Name Section */
+
+.Name-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Name-section > h2, .Name-section > p{
+    margin: 0;
+}
+
+/* Connect Section */
+.connect-section{
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Btn-connect{
+    width: 115px;
+    height: 34px;
+}
