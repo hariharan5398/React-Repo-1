@@ -1,0 +1,27 @@
+.Joke-sec{
+  display: flex;
+  line-height: 2em;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: aqua;
+  width: 500px;
+  margin: auto;
+}
+
+.Joke-sec > div{
+  margin-right: 2em;
+  background-color: grey;
+  
+}
+
+
+.details{
+  padding-left: 1em;
+  border-radius: 3px;
+  width: 100%;
+  background-color: grey;
+}
+
+.main{
+  margin: 100px 0;
+}
