@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+
+.Card{
+    display: flex;
+    width: 470px;
+    height: 170px;
+    padding: 2.5em;
+    border: 2px solid red;
+    justify-content: space-between;
+}
+
+.Card-img{
+    flex-shrink: 0;
+    width: 125px;
+    height: 170px;
+    display: flex;
+    border: 2px solid red;
+    object-fit: cover;
+}
+
+.Card-details{
+    border: 2px solid red;
+    padding: 1.25em 1em;
+}
+
+.Card-details-location{
+    margin: 0;
+    font-weight: 400;
+font-size: 10.24px;
+line-height: 12px;
+}
+
+.Card-details-title{
+    margin: 0 1em  0 0;
+    font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+}
+
+.Card-details-date{
+    font-weight: 700;
+font-size: 10.24px;
+line-height: 12px;
+}
+
+.Card-details-decr{
+    font-weight: 400;
+font-size: 10.24px;
+line-height: 150%;
+}
