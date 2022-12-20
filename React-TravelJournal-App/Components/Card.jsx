@@ -1,23 +1,35 @@
-import React from 'react'
+import React from "react";
+import location from "../public/location.svg";
 
-
-
-function CardTile(props){
-    return(
-        <div className='Card'>
-            <div className='Card-img' style={{backgroundImage:`url(${props.props.imageUrl})`}}></div>
-            <div className='Card-details'>
-                
-                    <p className='Card-details-location'>{props.props.location} <span><a href={props.props.googleMapsUrl}>View on Google Maps</a></span></p>
-                    <p className='Card-details-title'>{props.props.title}</p>
-                    <p className='Card-details-date'>{`${props.props.startDate} - ${props.props.endDate}`}</p>
-                    <p className='Card-details-decr'>{props.props.description}</p>
-            </div>
-            
-        </div>
-        
-    )
+function CardTile(props) {
+    const url = props.props.imageUrl;
+    const locate = props.props.location.toUpperCase();
+    const gmaps = props.props.googleMapsUrl;
+    const title = props.props.title;
+    const Sdate = props.props.startDate;
+    const Edate = props.props.endDate;
+    const description = props.props.description;
+  return (
+    <div className="Card">
+      <div
+        className="Card-img"
+        style={{ backgroundImage: `url(${url})` }}
+      ></div>
+      <div className="Card-details">
+        <p className="Card-details-location">
+          <img src={location} /> {locate}{" "}
+          <span>
+            <a href={gmaps} target={"_blank"}>
+              View on Google Maps
+            </a>
+          </span>
+        </p>
+        <p className="Card-details-title">{title}</p>
+        <p className="Card-details-date">{`${Sdate} - ${Edate}`}</p>
+        <p className="Card-details-decr">{description}</p>
+      </div>
+    </div>
+  );
 }
 
-
-export default CardTile
+export default CardTile;
