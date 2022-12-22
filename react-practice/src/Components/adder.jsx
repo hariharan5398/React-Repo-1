@@ -12,13 +12,15 @@ export default function Adder(){
     function add(){
         setVal((ele)=> ele +1)
     }
-
+    // setInterval(add, 10000)
 
     return (
-        <div>
-        <button onClick={minus}>minus</button>
-        <div>{val}</div>
-        <button onClick={add}>add</button>
+        <div className="counter">
+            <button className="counter--minus" onClick={minus}>–</button>
+            <div className="counter--count">
+                <h1>{val}</h1>
+            </div>
+            <button className="counter--plus" onClick={add}>+</button>
         </div>
     )
 }
