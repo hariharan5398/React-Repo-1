@@ -1,0 +1,18 @@
+.Box{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: none;
+  /* display: inline-block; */
+  margin: 1em;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.75em;
+  cursor: pointer;
+}
+
+.App{
+
+  display: flex;
+  flex-wrap: wrap;
+}
