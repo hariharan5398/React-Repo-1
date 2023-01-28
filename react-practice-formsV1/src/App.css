@@ -1,0 +1,14 @@
+input{
+  display: block;
+  margin: 1em;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.App{
+  display: flex;  
+  align-items: center;
+}
