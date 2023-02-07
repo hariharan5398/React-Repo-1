@@ -8,11 +8,17 @@ import './index.css'
 
 function App() {
   
+  const [toggle, setToggle] = React.useState(false)
 
   return (
-    <div>
-      <Header />
-      <Body />
+    <div className={`${toggle && "bg-gray-700"} h-full font-display`}>
+      <Header 
+        tog={toggle}
+        setTog={setToggle}
+      />
+      <Body 
+        tog={toggle}
+      />
     </div>
   )
 }
