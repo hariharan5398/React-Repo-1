@@ -6,50 +6,61 @@
     /* justify-content: center; */
 }
 
+p{
+    font-size:0.75rem;
+    color: grey;
+}
 
+h1{
+    font-weight: bold;
+    text-shadow: 1px 1px lightseagreen;
+}
 
 .TileSpace{
-    margin-top: 1em;
-    height: 300px;
     display: flex;
     flex-direction: column;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     border-radius: 8px;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px
+    text-align: center;
 }
 
 .TileSpaceEle{
     height: 200px;
-    padding: 0.1em;
+    /* padding: 0.1em; */
     display: flex;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     border-radius: 8px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px
+    gap: 8px
 }
 
 
 
 .TileElement{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
     border-radius: 7px;
     font-weight: bold;
     text-align: center;
     font-size: medium;
-    line-height: 3em;
+    line-height: 2.5em;
     cursor: pointer;
+  
+}
+
+button{
+    display: block;
 }
 
 .TileElement-click{
-   background: #ff4b1f;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    border: none;
 }
