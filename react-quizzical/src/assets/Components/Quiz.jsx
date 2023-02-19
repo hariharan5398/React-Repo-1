@@ -59,14 +59,14 @@ export default function Quiz(){
         optionArray.splice(getRandomIndex(), 0 , element.correct_answer)
         return (
             optionArray.map(
-                (optionValue) =>{
+                (optionValue, index) =>{
          
 
                     return (
-                        <div>
-                        <input className='hidden peer' key={key} type="radio" id={optionValue} value={optionValue} name={key}/>
-                        <label htmlFor={optionValue} className=" cursor-pointer peer-checked:bg-blue-600">
-                        <div className='m-2 border-2 border-blue-600 rounded-full px-2 peer-checked:bg-orange-500'>{optionValue}</div>
+                        <div key={key+index} >
+                        <input className='hidden peer' key={key} type="radio" id={optionValue+key} value={optionValue} name={key}/>
+                        <label htmlFor={optionValue+key} className="cursor-pointer bg-green-500"   >
+                        <div className='m-2 border-2 border-blue-600 rounded-full px-2'>{optionValue}</div>
                         
                         </label>
                         </div>
