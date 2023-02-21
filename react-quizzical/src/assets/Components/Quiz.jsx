@@ -97,7 +97,7 @@ export default function Quiz(){
                         onClick={(e)=>onChangeAns(e)}
                         disabled={evaluated}
                          />
-                        <div id={key+optionValue} className='m-2 border-2 border-blue-600 rounded-full px-2 peer-checked:font-bold peer-checked:bg-blue-600 peer-checked:text-white disabled:bg-gray-400' disabled={evaluated}>{optionValue}</div>
+                        <div id={key+optionValue} className='m-2 border-2 border-blue-600 rounded-full px-2 peer-checked:font-bold peer-checked:bg-blue-600 peer-checked:text-white peer-disabled::bg-gray-400' disabled={evaluated}>{optionValue}</div>
                         
                         </label>
                         </div>
@@ -129,6 +129,10 @@ export default function Quiz(){
                     document.getElementById(pickerIncorrect).classList.add("peer-checked:bg-red-600")
                     document.getElementById(pickerCorrect).classList.add("border-green-600")
                     document.getElementById(pickerCorrect).classList.add("bg-green-600")
+                    document.getElementById(pickerCorrect).classList.add("text-white")
+                    document.getElementById(pickerCorrect).classList.add("font-bold")
+
+
                 }
             }
             
@@ -156,9 +160,10 @@ export default function Quiz(){
 
     return(
         <div className=' w-screen'>
-            { ques.length == 0 ? spinner : <h1>{ques}</h1> }
+        
+            { ques.length == 0 ? spinner : <div>{ques}</div> }
             { ques.length > 0 &&  <button 
-            className='my-4 md:mx-96 w-screen h-14 md:w-44 px-2 border-2 md:rounded-full hover:bg-blue-700 font-extrabold bg-blue-500 text-white text-lg' 
+            className='my-4 md:mx-96 w-screen h-14 md:w-44 px-2 md:border-2 md:rounded-full hover:bg-blue-700 font-extrabold bg-blue-500 text-white text-lg' 
             onClick={()=>evaluate()}
             disabled={evaluated}
             >
