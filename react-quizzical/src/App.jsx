@@ -11,7 +11,7 @@ function App() {
   const [start, setStart] = React.useState(()=> true)
 
   return (
-    <div className="h-screen flex font-karla">
+    <div className="h-screen flex font-karla p-2">
 
       {/* Home Screen Component */}
       { start && <Home setStart={setStart}/> }
