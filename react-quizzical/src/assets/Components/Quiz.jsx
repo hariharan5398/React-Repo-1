@@ -97,7 +97,7 @@ export default function Quiz(){
                         onClick={(e)=>onChangeAns(e)}
                         disabled={evaluated}
                          />
-                        <div id={key+optionValue} className='m-2 border-2 border-blue-600 rounded-full px-2 peer-checked:font-bold peer-checked:bg-blue-600 peer-checked:text-white peer-disabled::bg-gray-400' disabled={evaluated}>{optionValue}</div>
+                        <div id={key+optionValue} className='opt-div m-2 border-2 border-blue-600 rounded-full px-2 peer-checked:font-bold peer-checked:bg-blue-600 peer-checked:text-white peer-disabled::bg-gray-400' disabled={evaluated}>{optionValue}</div>
                         
                         </label>
                         </div>
@@ -121,12 +121,17 @@ export default function Quiz(){
                     mark.current+=1
                     
                     // console.log(picker, document.getElementById(picker))
-                    document.getElementById(pickerCorrect).classList.add("peer-checked:border-green-600")
-                    document.getElementById(pickerCorrect).classList.add("peer-checked:bg-green-600")
+                    document.getElementById(pickerCorrect).classList.add("border-green-600")
+                    document.getElementById(pickerCorrect).classList.add("bg-green-600")
+                    document.getElementById(pickerCorrect).classList.add("font-bold")
+                    document.getElementById(pickerCorrect).classList.add("fext-white")
+
                     // setQues((prev)=>prev)
                 }else{
-                    document.getElementById(pickerIncorrect).classList.add("peer-checked:border-red-600")
-                    document.getElementById(pickerIncorrect).classList.add("peer-checked:bg-red-600")
+                    document.getElementById(pickerIncorrect).classList.add("border-red-600")
+                    document.getElementById(pickerIncorrect).classList.add("bg-red-600")
+                    document.getElementById(pickerIncorrect).classList.add("text-white")
+                    document.getElementById(pickerIncorrect).classList.add("font-bold")
                     document.getElementById(pickerCorrect).classList.add("border-green-600")
                     document.getElementById(pickerCorrect).classList.add("bg-green-600")
                     document.getElementById(pickerCorrect).classList.add("text-white")
@@ -135,8 +140,16 @@ export default function Quiz(){
 
                 }
             }
+            // opt-div class is to seggregate div's related to input tag
+            const delList = document.querySelectorAll(".opt-div")
+   
+        delList.forEach((element)=>{
+            // Removng peer-checked styles from opt-div elements
+            element.classList.remove("peer-checked:bg-blue-600")
+            element.classList.remove("peer-checked:text-white")
+            element.classList.remove("peer-checked:font-bold")
             
-            console.log(mark.current)
+        })
             setEvaluated((prev)=>!prev)
         }
 
@@ -155,8 +168,6 @@ export default function Quiz(){
 </div>
     )
 
-
-    console.log("mark", mark.current)
 
     return(
         <div className=' w-screen'>
