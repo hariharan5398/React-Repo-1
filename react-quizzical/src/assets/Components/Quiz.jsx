@@ -1,6 +1,7 @@
 import { data } from 'autoprefixer';
 import React from 'react';
 import { nanoid } from 'nanoid';
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 export default function Quiz(){
     // API Used
@@ -150,6 +151,10 @@ export default function Quiz(){
             element.classList.remove("peer-checked:font-bold")
             
         })
+            confetti({
+                particleCount : 200,
+                spread : 60
+            })
             setEvaluated((prev)=>!prev)
         }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Quiz from './assets/Components/Quiz'
 import Home from './assets/Components/Home'
-
+import Category from './assets/Components/Category'
 
 
 function App() {
@@ -14,8 +14,9 @@ function App() {
     <div className="w-screen h-screen flex font-karla">
 
       {/* Home Screen Component */}
-      { start && <Home setStart={setStart}/> }
-      { !start && <Quiz />}
+      {/* { start && <Home setStart={setStart}/> }
+      { !start && <Quiz />} */}
+      {Category}
     </div>
   )
 }
